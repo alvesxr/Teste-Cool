@@ -75,6 +75,35 @@ p {
   background: #ede9fe;
 }
 
+.passaro {
+  position: fixed;
+  top: var(--topo);
+  left: -60px;
+  font-size: 2rem;
+  opacity: 0.85;
+  pointer-events: none;
+  animation: voar var(--duracao) linear var(--atraso) infinite;
+  z-index: 0;
+}
+
+@keyframes voar {
+  0% {
+    transform: translateX(-10vw) translateY(0) scaleX(1);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-15px) scaleX(1);
+  }
+  50% {
+    transform: translateX(50vw) translateY(10px) scaleX(1);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-10px) scaleX(1);
+  }
+  100% {
+    transform: translateX(110vw) translateY(0) scaleX(1);
+  }
+}
+
 @keyframes aparecer {
   from {
     opacity: 0;
